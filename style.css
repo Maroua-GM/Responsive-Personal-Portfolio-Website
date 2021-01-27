@@ -62,12 +62,12 @@
 	color: #fff;
 	font-size: 23px;
 	cursor: pointer;
+	display: none;
 }
 /* home styling */
 .home {
 	display: flex;
 	background: url(images/pngegg.png) no-repeat right, linear-gradient(to bottom, #0a0a0a, #970e2a);
-
 	height: 100vh;
 	color: #fff;
 	min-height: 500px;
@@ -91,4 +91,72 @@
 .home .home-content .text-3 span {
 	color: crimson;
 	font-weight: 500;
+}
+.home .home-content a {
+	display: inline-block;
+	background: crimson;
+	color: #fff;
+	font-size: 25px;
+	padding: 12px 26px;
+}
+
+/* responsive media query start */
+@media (max-width: 1104px) {
+	.home .max-width {
+		margin-left: 0;
+	}
+}
+@media (max-width: 991px) {
+	.max-width {
+		padding: 0 50px;
+	}
+}
+
+@media (max-width: 947px) {
+	.navbar .menu {
+		position: fixed;
+		width: 100%;
+		height: 100vh;
+		left: -100%;
+		top: 0;
+		background: #111;
+		text-align: center;
+		padding-top: 80px;
+		transition: all 0.3s ease;
+	}
+	.navbar .menu.active {
+		left: 0;
+	}
+	.navbar .menu li {
+		display: block;
+	}
+	.navbar .menu li a {
+		display: inline-block;
+		margin: 20px 0;
+		font-size: 25px;
+	}
+	.menu-btn {
+		display: block;
+		z-index: 99;
+	}
+	.menu-btn i.active::before {
+		content: "\f00d";
+	}
+	.home .home-content .text-2 {
+		font-size: 70px;
+	}
+	.home .home-content .text-3 {
+		font-size: 35px;
+	}
+}
+@media (max-width: 690px) {
+	.max-width {
+		padding: 0 23px;
+	}
+	.home .home-content .text-2 {
+		font-size: 60px;
+	}
+	.home .home-content .text-3 {
+		font-size: 32px;
+	}
 }
