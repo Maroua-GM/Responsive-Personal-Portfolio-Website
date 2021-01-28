@@ -5,6 +5,9 @@
 	box-sizing: border-box;
 	text-decoration: none;
 }
+html {
+	scroll-behavior: smooth;
+}
 /*Navbar styling*/
 .navbar {
 	position: fixed;
@@ -34,6 +37,7 @@
 	display: inline-block;
 }
 .navbar .menu li a {
+	display: block;
 	color: white;
 	font-size: 18px;
 	font-weight: 500;
@@ -64,6 +68,30 @@
 	font-size: 23px;
 	cursor: pointer;
 	display: none;
+}
+
+.scroll-up-btn {
+	position: fixed;
+	height: 45px;
+	width: 42px;
+	background: crimson;
+	right: 30px;
+	bottom: 10px;
+	text-align: center;
+	line-height: 45px;
+	color: #fff;
+	z-index: 999;
+	font-size: 30px;
+	border-radius: 6px;
+	cursor: pointer;
+	opacity: 0;
+	pointer-events: none;
+	transition: all 0.3s ease;
+}
+.scroll-up-btn.show {
+	bottom: 30px;
+	opacity: 1;
+	pointer-events: auto;
 }
 /* home styling */
 .home {
@@ -116,7 +144,8 @@ section {
 .services,
 .skills,
 .teams,
-.contact {
+.contact,
+footer {
 	font-family: "Poppins", sans-serif;
 }
 .about .about-content,
@@ -475,6 +504,19 @@ section .title::after {
 .contact .contact-content .right form .button button:hover {
 	color: crimson;
 	background: none;
+}
+/* footer styling section */
+footer {
+	background: #111;
+	padding: 20px 23px;
+	color: #fff;
+	text-align: center;
+}
+footer span a {
+	color: crimson;
+}
+footer span a:hover {
+	text-decoration: underline;
 }
 
 /* responsive media query start */
