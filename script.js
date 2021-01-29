@@ -12,11 +12,9 @@ $(document).ready(function () {
             $('.scroll-up-btn').removeClass("show");
         }
     });
-    //refrech la page 
     
-    $(window).reload(function(){
-        $('html').animate({scrollTop:0})
-    });
+    
+ 
      // slide up script
      $('.scroll-up-btn').click(function(){
          $('html').animate({scrollTop:0})
